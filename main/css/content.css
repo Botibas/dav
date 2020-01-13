@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+
+/* ==================GENERAL================= */
+/*
+body {
+	margin: 0;
+	background: #217FF3;
+	background: -webkit-linear-gradient(-135deg, #0AA6F9, #FF811B);
+	background: -o-linear-gradient(-135deg, #0AA6F9, #FF811B);
+	background: -moz-linear-gradient(-135deg, #0AA6F9, #FF811B);
+	background: linear-gradient(-135deg, #0AA6F9, #FF811B);
+	background-attachment: fixed;
+}*/
+
+#cardContainer{
+	width:100%;
+	background-color:#FFFFFF;
+}
+
+#davLogoContainer{
+	width:30%;
+	height:10%;
+	margin: 0px auto;
+	background-image:url('./images/davLogo.png');
+}
