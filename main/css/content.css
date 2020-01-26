@@ -5,23 +5,14 @@
 
 
 /* ==================GENERAL================= */
-/*
-body {
-	margin: 0;
-	background: #217FF3;
-	background: -webkit-linear-gradient(-135deg, #0AA6F9, #FF811B);
-	background: -o-linear-gradient(-135deg, #0AA6F9, #FF811B);
-	background: -moz-linear-gradient(-135deg, #0AA6F9, #FF811B);
-	background: linear-gradient(-135deg, #0AA6F9, #FF811B);
-	background-attachment: fixed;
-}*/
+
 /* ==================End GENERAL================= */
 
 /* ==================Home Site================= */
 .parent {
 	display: grid;
 	grid-template-columns: 1fr 3fr 1fr;
-	grid-template-rows: 0.4fr repeat(4, 1fr);
+	grid-template-rows: 0.4fr 1fr 4fr 1fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
 	width: 100vw;
@@ -67,5 +58,11 @@ body {
 	align-items: center; 
 }
 
-.map { grid-area: 3 / 2 / 4 / 3;}
+.mapbox { grid-area: 3 / 2 / 4 / 3;}
 /* ==================End Home Site================= */
+/*===================DetailedHouse==================*/
+
+#header {
+	width:100%;
+	background-color: lightpink;
+}

@@ -1,5 +1,6 @@
 <?php
 	require_once "content/home.php";
+	require_once "content/detailedHouse.php";
 	require_once "./database.php";
 	
 
@@ -7,12 +8,16 @@
         if(isset($_GET["page"]))
 		    $page = $_GET["page"];		//Get current Page
         else
-            $page = "login";
+            $page = "home";
 		
 		switch ($page) {
 			case 'home':
 				return page_getHome();
 				break;
+			case 'detailedHouse':
+				return page_getDetailedHouse();
+			    break;
+		
 		}
 
 
