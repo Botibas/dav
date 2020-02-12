@@ -8,14 +8,10 @@
             $result['location'] = $row['location'];
             $result['maxAnzahl'] = $row['maxAnzahl'];
             $result['descriptionText'] = $row['descriptionText'];
+			$result['adress'] = $row['adress'];
         }
         return $result;
     }    
 
-    function db_fetchAdressByHIDArray($dbResult) {
-        $result = array();
-        $row = $dbResult->fetch_array();
-        $result = $row['adress'];
-        return $result;
-    }
+  
 ?>

@@ -59,34 +59,6 @@
     }
     
     
-    function db_getHouseNameByHID($HID){
-	    $dbConnection = get_dbConnection();
-
-        $sql = 'SELECT houseName From Q1_Dav_Houses WHERE HID='.$HID;
-        $result = mysqli_query($dbConnection, $sql);
-
-	    if (!$dbResult = $dbConnection->query($sql)) {
-            echo $dbConnection->error;
-           return false;
-        }
-
-        return db_fetchHouseNameByHIDArray($result);
-    }
-
-	function db_getAdressByHID($HID){
-	    $dbConnection = get_dbConnection();
-
-        $sql = 'SELECT adress From Q1_Dav_Houses WHERE HID='.$HID;
-        $result = mysqli_query($dbConnection, $sql);
-
-	    if (!$dbResult = $dbConnection->query($sql)) {
-            echo $dbConnection->error;
-           return false;
-        }
-
-        return db_fetchAdressByHIDArray($result);
-    }
-
-
+    
    
 ?>
