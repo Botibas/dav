@@ -84,7 +84,7 @@
            return false;
         }
 
-        return db_fetchHouseNameByHIDArray($result);
+        return db_fetchAdressByHIDArray($result);
     }
 
 
