@@ -62,7 +62,34 @@
 /* ==================End Home Site================= */
 /*===================DetailedHouse==================*/
 
-#header {
-	width:100%;
-	background-color: lightpink;
+#titleRow{
+	margin-top: 30px;
+}
+
+.houseHeading{
+	font-family: Montserrat;
+	font-size: 35px;
+	float: left;
+	margin:0px;
+}
+#headerIcon{
+	width:35px;
+	height:35px;
+	margin-bottom: 5px;
+}
+
+#imageRow{
+	margin-top: 20px;
+}
+
+#descriptionRow{
+	margin-top: 20px;
+}
+
+.descriptionText{
+	text-align: justify;
+}
+
+#nav-tabContent{
+	margin-top: 10px;
 }
