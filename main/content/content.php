@@ -1,6 +1,8 @@
 <?php
 	require_once "content/home.php";
 	require_once "content/detailedHouse.php";
+	require_once "content/orders.php";
+
 	require_once "./database.php";
 	
 
@@ -17,7 +19,9 @@
 			case 'detailedHouse':
 				return page_getDetailedHouse();
 			    break;
-		
+			case 'orders':
+				return page_getOrders();
+				break;
 		}
 
 

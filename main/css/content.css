@@ -93,3 +93,54 @@
 #nav-tabContent{
 	margin-top: 10px;
 }
+
+
+
+.markerGeoJson {
+	background-image: url('../images/mapbox-icon.svg');
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+  }
+
+  /*===================Orders==================*/
+
+#bookingRow{
+	margin-top:40px;
+}
+
+#dateContainer{
+	display:flex;
+}
+  #startDate{
+	display:inline-block;
+	float: left;
+	margin-right:30px;
+  }
+
+  #endDate{
+	display:inline-block;
+	float: left;
+  }
+
+.standardBtn {
+	font-family: Poppins;
+	font-size: 15px;
+	line-height: 1.5;
+	color: white;
+	display: block;
+	background: #FF811B;
+	height: 50px;
+	border-radius: 25px;
+	border: 0px;
+	outline: none;
+	text-align: center;
+}
+
+.loginBtn {
+	display: block;
+	padding: 0 25px 0 25px;
+	background-color: #01C875 !important;
+}

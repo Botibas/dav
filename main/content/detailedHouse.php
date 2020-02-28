@@ -69,8 +69,8 @@
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Adress</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Info</a>
                             </div>
                         </nav>
 
@@ -78,13 +78,17 @@
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                 <p class="descriptionText">'.$house['descriptionText'].'</p>
                             </div>
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <p class="descriptionText">Die maximale Personenanzahl beträgt '.$house['maxAnzahl'].'</p>
+                            </div>
                         </div>
                     </div>
 
                     <div id="houseCalender" class="col-4">
-                        calender
+                        <p>Date: <input type="text" id="datepicker"></p>
                     </div>
                 </div>
 
@@ -101,6 +105,13 @@
                 zoom:[4],
                 style: "mapbox://styles/tobiv/ck5tyx1rj0svu1ipbh74lh7bs"
             });
+
+
+
+            $( function() {
+                $( "#datepicker" ).datepicker();
+              } );
+
         </script>';
         
 

@@ -44,6 +44,8 @@
         return db_fetchHouseNameByHIDArray($result);
     }
     //-------------------Gibt den Namen eines Hauses anhand der HID zurück
+    
+
     function db_getHouseFromHID($HID){
 	    $dbConnection = get_dbConnection();
 
@@ -58,6 +60,19 @@
         return db_fetchHouseFromHIDArray($result);
     }
     
+    function db_getHouses(){
+	    $dbConnection = get_dbConnection();
+
+        $sql = 'SELECT * From Q1_Dav_Houses';
+        $result = mysqli_query($dbConnection, $sql);
+        
+	    if (!$dbResult = $dbConnection->query($sql)) {
+            echo $dbConnection->error;
+           return false;
+        }
+
+        return db_fetchHousesArray($result);
+    }
     
     function db_getHouseNameByHID($HID){
 	    $dbConnection = get_dbConnection();
