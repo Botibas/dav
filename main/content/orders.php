@@ -45,9 +45,9 @@
                         </div>';
                         $head = 'Content-Type: text/html';
 
-                        mail($email, $subject, $message, $head);
+                        mail($email, $subject, $message, $head);//Mail senden an den der Buchen wollte
 
-                        db_createOrder($startDate, $endDate, $anzahl, $email);
+                        db_createOrder($startDate, $endDate, $anzahl, $email); //Eintrag in DB
                         $result .= ' 
                         <div id="titleRow" class="row">
                             <div id="titleContainer" class="container">
@@ -81,7 +81,6 @@
 
                         mail($email, $subject, $message, $head);
 
-                        db_createOrder($startDate, $endDate, $anzahl, $email);
                         $result .= ' 
                         <div id="titleRow" class="row">
                             <div id="titleContainer" class="container">

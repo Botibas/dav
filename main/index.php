@@ -26,12 +26,12 @@
             $message = '
             <p style="font-size:30px; text-align:center;color:black;">Anfrage zu einer Buchung</p>
             <div style="margin-left:30%">
-                <a href="http://schulprj.de/dav/main/index.php?page=orders&HID='.$house['HID'].'&startDate='.$startDate.'&endDate='.$endDate.'&anzahl='.$anzahl.'&email='.$email.'&action=requestAccepted" style="background-color: red;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;">Anfrage ablehnen</a>
-                <a href="http://schulprj.de/dav/main/index.php?page=orders&HID='.$house['HID'].'&startDate='.$startDate.'&endDate='.$endDate.'&anzahl='.$anzahl.'&email='.$email.'&action=requestRejected" style="background-color: #4CAF50;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;">Anfrage annehmen</a>
+                <a href="http://schulprj.de/dav/index.php?page=orders&HID='.$house['HID'].'&startDate='.$startDate.'&endDate='.$endDate.'&anzahl='.$anzahl.'&email='.$email.'&action=requestRejected" style="background-color: red;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;">Anfrage ablehnen</a>
+                <a href="http://schulprj.de/dav/index.php?page=orders&HID='.$house['HID'].'&startDate='.$startDate.'&endDate='.$endDate.'&anzahl='.$anzahl.'&email='.$email.'&action=requestAccepted" style="background-color: #4CAF50;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;">Anfrage annehmen</a>
             </div>';
             $head = 'Content-Type: text/html';
         
-            mail($user['eMail'], $subject, $message, $head);
+            mail($user['eMail'], $subject, $message, $head);//Buchungsanfrage wird per Mail an Hausbesitzer geschickt
     
             header('Location: ?page=orders&HID='.$house['HID'].'&action=requestSend');
         }
