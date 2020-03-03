@@ -18,7 +18,7 @@
 
                 <div id="titleRow" class="row">
                     <div id="titleContainer" class="container">
-                        <p class="houseHeading"> <img src="./images/home.svg" id="headerIcon">'.$house['houseName'].'</p>
+                        <p class="houseHeading"> <a href="?page=home"> <img src="./images/home.svg" id="headerIcon"></a>'.$house['houseName'].'</p>
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@
 
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img class="d-block w-100" src="./images/testHuette.jpg" alt="First slide">
+                                    <img style="display: block;max-width: 730px;max-height: 365px;width: auto;height: auto;" class="d-block w-100" src="./images/'.db_getImgFromHouse($HID).'" alt="First slide">
                                 </div>
 
                                 <div class="carousel-item">
@@ -79,7 +79,7 @@
                                 <p class="descriptionText">'.$house['descriptionText'].'</p>
                             </div>
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                
+                                <p class="descriptionText"><b>Die Adresse ist: </b>'.$house['adress'].'</p>
                             </div>
                             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                                 <p class="descriptionText">Die maximale Personenanzahl beträgt '.$house['maxAnzahl'].'</p>
@@ -98,14 +98,16 @@
         $result .= '
         </body>
         <script>
-            mapboxgl.accessToken = "pk.eyJ1IjoidG9iaXYiLCJhIjoiY2s1bWFoMTZ4MHV6YTNrcWtuMnJxcW9ocCJ9.b7Gy3DK4Y_JKXEttx8zj_Q";
-            var map = new mapboxgl.Map({
-                container: "map",
-                center: [11.524937, 51.065097],
-                zoom:[4],
-                style: "mapbox://styles/tobiv/ck5tyx1rj0svu1ipbh74lh7bs"
-            });
+        mapboxgl.accessToken = "pk.eyJ1IjoidG9iaXYiLCJhIjoiY2s1bWFoMTZ4MHV6YTNrcWtuMnJxcW9ocCJ9.b7Gy3DK4Y_JKXEttx8zj_Q";
+          
+        var map = new mapboxgl.Map({
+            container: "map",
+            center: [11.524937, 51.065097],
+            zoom:[4],
+            style: "mapbox://styles/tobiv/ck5tyx1rj0svu1ipbh74lh7bs"
+        });
 
+        
 
 
             $( function() {

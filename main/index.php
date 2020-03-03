@@ -8,6 +8,7 @@
     if(!isset($_SESSION)){ 
         session_start(); 
     }
+    
     if(isset($_GET["action"])){
         if($_GET["action"] == "sendOrderRequest"){
             $HID = $_GET["HID"];

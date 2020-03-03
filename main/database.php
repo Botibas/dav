@@ -8,7 +8,7 @@
         $hostname="localhost";
         $username="db_schulprj_user";
         $password="20fj%iQ7";
-        $db="db_schulprj";
+        $db="DB_SchulPrj";
 
         if ($dbConnection == false) {
             $dbConnection = new mysqli($hostname, $username, $password, $db);// or die("Connect failed: %s\n". $dbConnection -> error);
@@ -49,7 +49,7 @@
     function db_getHouseFromHID($HID){
 	    $dbConnection = get_dbConnection();
 
-        $sql = 'SELECT * From Q1_Dav_Houses WHERE HID='.$HID;
+        $sql = 'SELECT * From Q1_DAV_Houses WHERE HID='.$HID;
         $result = mysqli_query($dbConnection, $sql);
         
 	    if (!$dbResult = $dbConnection->query($sql)) {
@@ -59,11 +59,25 @@
 
         return db_fetchHouseFromHIDArray($result);
     }
+
+    function db_getImgFromHouse($HID){
+	    $dbConnection = get_dbConnection();
+
+        $sql = 'SELECT IMGPaths From Q1_DAV_HouseIMGPaths WHERE HID='.$HID;
+        $result = mysqli_query($dbConnection, $sql);
+        
+	    if (!$dbResult = $dbConnection->query($sql)) {
+            echo $dbConnection->error;
+           return false;
+        }
+
+        return db_fetchImgFromHouseArray($result);
+    }
     
     function db_getHouses(){
 	    $dbConnection = get_dbConnection();
 
-        $sql = 'SELECT * From Q1_Dav_Houses';
+        $sql = 'SELECT * From Q1_DAV_Houses';
         $result = mysqli_query($dbConnection, $sql);
         
 	    if (!$dbResult = $dbConnection->query($sql)) {

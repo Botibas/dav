@@ -26,10 +26,18 @@
             $result['HID'] = $row['HID'];
             $result['houseName'] = $row['houseName'];
             $result['coordinateX'] = $row['coordinateX'];
+            $result['adress'] = $row['adress'];
             $result['coordinateY'] = $row['coordinateY'];
             $result['maxAnzahl'] = $row['maxAnzahl'];
             $result['descriptionText'] = $row['descriptionText'];
         }
+        return $result;
+    } 
+    
+    function db_fetchImgFromHouseArray($dbResult) {
+        $result = array();
+        $row = $dbResult->fetch_array();
+        $result = $row['IMGPaths'];
         return $result;
     }    
 

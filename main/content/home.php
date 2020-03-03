@@ -43,22 +43,29 @@
                     $house = db_getHouses();
                     foreach($house as $h){
                         $result .= '{type: "Feature", geometry: {type: "Point",coordinates: ['.$h['coordinateX'].','.$h['coordinateY'].']},
-                        properties: {title: "Mapbox",description: "'.$h['houseName'].'"}},';
+                        properties: {title: "'.$h['houseName'].'",description: "<b>Adresse</b>: '.$h['adress'].'",HID: "'.$h['HID'].'"}},';
                     }
     $result .= ']
             };
 
-              geojson.features.forEach(function(marker) {
+            
 
+            geojson.features.forEach(function(marker) {
                 // create a HTML element for each feature
                 var el = document.createElement("div");
                 el.className = "markerGeoJson";
-              
+                
                 // make a marker for each feature and add to the map
                 new mapboxgl.Marker(el)
                   .setLngLat(marker.geometry.coordinates)
                   .addTo(map);
-              });
+
+                new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                  .setHTML("<h4>" + marker.properties.title + "</h4><p>" + marker.properties.description + "</p> <br> <a'." href=?page=detailedHouse&HID=".'" + marker.properties.HID + ">mehr..</a>"))
+                .addTo(map);
+            });
 
         </script>';
         

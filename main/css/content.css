@@ -76,6 +76,7 @@
 	width:35px;
 	height:35px;
 	margin-bottom: 5px;
+	margin-right: 20px;
 }
 
 #imageRow{
@@ -138,6 +139,15 @@
 	outline: none;
 	text-align: center;
 }
+
+.mapboxgl-popup {
+	max-width: 200px;
+  }
+  
+  .mapboxgl-popup-content {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+  }
 
 .loginBtn {
 	display: block;
