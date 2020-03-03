@@ -23,7 +23,7 @@
                         </div>
 
                         <div id="bookingRow" class="row">
-                            Ihre Anfrage zur Buchung des Hauses '.$house['houseName'].'
+                            Ihre Anfrage zur Buchung des Hauses '.$house['houseName'].' wurde an den Hausbesitzer geschickt
                         </div>
 
                         </div>';
@@ -39,7 +39,7 @@
 
                         $subject = 'Anfrage für die '.$house['houseName'];
                         $message = '
-                        <p style="font-size:30px; text-align:center;color:black;">Anfrage zu ihrer Buchung</p>
+                        <p style="font-size:30px; text-align:center;color:black;">Informationen zu ihrer Buchungsanfrage</p>
                         <div style="margin-left:30%">
                             Ihre Buchungsanfrage wurde von dem Hausbesitzer angenommen. Weitere Informationen zu Zahlung usw. erhalten sie in kürze per Email
                         </div>';
@@ -73,13 +73,13 @@
 
                         $subject = 'Anfrage für die '.$house['houseName'];
                         $message = '
-                        <p style="font-size:30px; text-align:center;color:black;">Anfrage zu ihrer Buchung</p>
+                        <p style="font-size:30px; text-align:center;color:black;">Information zu ihrer Buchungsanfrage</p>
                         <div style="margin-left:30%">
                             <p>Ihre Buchungsanfrage wurde von dem Hausbesitzer abgelehnt.</p>
                         </div>';
                         $head = 'Content-Type: text/html';
 
-                        mail($email, $subject, $message, $head);
+                        mail($email, $subject, $message, $head);//Mail senden an den der Buchen wollte
 
                         $result .= ' 
                         <div id="titleRow" class="row">
