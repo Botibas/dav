@@ -88,7 +88,9 @@
                     </div>
 
                     <div id="houseCalender" class="col-4">
-                        <p>Date: <input type="text" id="datepicker"></p>
+                        <form method="post" action="?page=orders&HID='.$house['HID'].'">
+                            <input type="submit" class="loginBtn standardBtn" value="Jetzt Buchen">
+                        </form>
                     </div>
                 </div>
 
@@ -107,12 +109,6 @@
             style: "mapbox://styles/tobiv/ck5tyx1rj0svu1ipbh74lh7bs"
         });
 
-        
-
-
-            $( function() {
-                $( "#datepicker" ).datepicker();
-              } );
 
         </script>';
         

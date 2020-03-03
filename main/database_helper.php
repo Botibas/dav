@@ -33,11 +33,32 @@
         }
         return $result;
     } 
+
+    function db_fetchAllFromUserArray($dbResult) {
+        $result = array();
+
+        while ($row = $dbResult->fetch_array()){
+            $result['UID'] = $row['UID'];
+            $result['firstName'] = $row['firstName'];
+            $result['lastName'] = $row['lastName'];
+            $result['eMail'] = $row['eMail'];
+            $result['password	'] = $row['password	'];
+            $result['status'] = $row['status'];
+        }
+        return $result;
+    } 
     
     function db_fetchImgFromHouseArray($dbResult) {
         $result = array();
         $row = $dbResult->fetch_array();
         $result = $row['IMGPaths'];
+        return $result;
+    }   
+    
+    function db_fetchUIDFromHIDArray($dbResult) {
+        $result = array();
+        $row = $dbResult->fetch_array();
+        $result = $row['UID'];
         return $result;
     }    
 

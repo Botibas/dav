@@ -102,6 +102,51 @@
         return db_fetchHouseNameByHIDArray($result);
     }
 
+    function db_getUIDFromHID($HID){
+	    $dbConnection = get_dbConnection();
+
+        $sql = 'SELECT UID From Q1_DAV_V_Houses_Users WHERE HID='.$HID;
+        $result = mysqli_query($dbConnection, $sql);
+
+	    if (!$dbResult = $dbConnection->query($sql)) {
+            echo $dbConnection->error;
+           return false;
+        }
+
+        return db_fetchUIDFromHIDArray($result);
+    }
+
+    function db_getAllFromUser($UID){
+	    $dbConnection = get_dbConnection();
+
+        $sql = 'SELECT * From Q1_DAV_Users WHERE UID='.$UID;
+        $result = mysqli_query($dbConnection, $sql);
+
+	    if (!$dbResult = $dbConnection->query($sql)) {
+            echo $dbConnection->error;
+           return false;
+        }
+
+        return db_fetchAllFromUserArray($result);
+    }
+
+    //---------------------------------Orders
+
+    function db_createOrder($startDate, $endDate, $personNumber, $email){
+        $dbConnection = get_dbConnection();
+        
+        $sql = 'INSERT INTO Q1_DAV_Orders(startDay,endDay,personenAnzahl,email)
+                VALUES("'.$startDate.'", "'.$endDate.'", '.$personNumber.', "'.$email.'")';
+        if (!$dbResult = $dbConnection->query($sql)) {
+            echo $dbConnection->error;
+            return false;
+        }
+    }
+
+
+
+
+
 
 
    
