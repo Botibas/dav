@@ -14,7 +14,7 @@
             $result[$i]['maxAnzahl'] = $row['maxAnzahl'];
             $result[$i]['descriptionText'] = $row['descriptionText'];
             
-            $i++;
+            $i++;erfwselff puijalskdfjölkadsjf
         }
         return $result;
     }
