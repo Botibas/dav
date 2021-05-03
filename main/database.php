@@ -9,7 +9,7 @@
         $username="db_schulprj_user";
         $password="20fj%iQ7";
         $db="DB_SchulPrj";
-
+ k  psdaklfjenlksfadklöjasödlkf
         if ($dbConnection == false) {
             $dbConnection = new mysqli($hostname, $username, $password, $db);// or die("Connect failed: %s\n". $dbConnection -> error);
             if ($dbConnection->connect_error) {
